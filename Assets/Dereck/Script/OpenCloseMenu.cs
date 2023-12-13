@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class OpenCloseMenu : MonoBehaviour
 {
-    public GameObject _mainMenu;
+
+    
+    public GameObject _mainMenu; 
+    public GameObject _mapMenu;
+
 
     void Update()
     {
@@ -12,11 +16,21 @@ public class OpenCloseMenu : MonoBehaviour
         {
             _mainMenu.gameObject.SetActive(!_mainMenu.gameObject.activeSelf);
         }
+
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            _mapMenu.gameObject.SetActive(!_mapMenu.gameObject.activeSelf);
+        }
     }
     
-    public void ClosingMenu()
+    public void ClosingMainMenu()
     {
         _mainMenu.gameObject.SetActive(false);
+    }
+    
+    public void ClosingMapMenu()
+    {
+        _mapMenu.gameObject.SetActive(false);
     }
 
     
