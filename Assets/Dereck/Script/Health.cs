@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
@@ -9,11 +10,13 @@ public class Health : MonoBehaviour
     [SerializeField] private UnityEvent healthDecreased;
     [SerializeField] private UnityEvent healthReachedMin;
     private int _health;
+    public Image healthBar;
 
     private void Awake()
     {
         _health = maxHealth;
     }
+
 
     public void Decrease(int damage)
     {
@@ -26,9 +29,12 @@ public class Health : MonoBehaviour
 
         if (_health == 0)
             healthReachedMin.Invoke();
+        healthBar.fillAmount = _health / maxHealth;
     }
     public void HealthRefill()
     {
         _health = maxHealth;
+        healthBar.fillAmount = _health / maxHealth;
+
     }
 }
