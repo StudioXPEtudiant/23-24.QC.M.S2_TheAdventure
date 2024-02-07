@@ -6,10 +6,11 @@ using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
-    [SerializeField] private int maxHealth = 5;
+    [SerializeField] private float maxHealth = 5;
     [SerializeField] private UnityEvent healthDecreased;
     [SerializeField] private UnityEvent healthReachedMin;
-    private int _health;
+    [SerializeField] private UnityEvent healthHeal;
+    private float _health;
     public Image healthBar;
 
     private void Awake()
@@ -18,7 +19,7 @@ public class Health : MonoBehaviour
     }
 
 
-    public void Decrease(int damage)
+    public void Decrease(float damage)
     {
         if (_health == 0 || damage <= 0)
             return;
@@ -35,6 +36,17 @@ public class Health : MonoBehaviour
     {
         _health = maxHealth;
         healthBar.fillAmount = _health / maxHealth;
-
+       
+    }
+    public void Heal(float heal)
+    { 
+    if (_health == 0 || heal <= 0)
+            return;
+        _health += heal;
+        healthHeal.Invoke();
+        if (_health > maxHealth)
+            _health = maxHealth;
+            
+        healthBar.fillAmount = _health / maxHealth;
     }
 }
