@@ -867,6 +867,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mainMenu: {fileID: 681546506}
   _mapMenu: {fileID: 1175373825}
+--- !u!114 &1271726996 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4373818253555441019, guid: d74bc71d888d00f499143f4dda0655ce, type: 3}
+  m_PrefabInstance: {fileID: 3625668295936681794}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1336284310
 GameObject:
   m_ObjectHideFlags: 0
@@ -1962,5 +1973,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4373818253555441019, guid: d74bc71d888d00f499143f4dda0655ce, type: 3}
+      propertyPath: m_text
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4373818253555441019, guid: d74bc71d888d00f499143f4dda0655ce, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 4373818253555441019, guid: d74bc71d888d00f499143f4dda0655ce, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6147947253828462882, guid: d74bc71d888d00f499143f4dda0655ce, type: 3}
+      propertyPath: rateXP
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6147947253828462882, guid: d74bc71d888d00f499143f4dda0655ce, type: 3}
+      propertyPath: playerLevelTxt
+      value: 
+      objectReference: {fileID: 1271726996}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d74bc71d888d00f499143f4dda0655ce, type: 3}
