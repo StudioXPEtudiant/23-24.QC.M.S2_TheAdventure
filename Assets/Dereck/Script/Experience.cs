@@ -25,7 +25,7 @@ public class Experience : MonoBehaviour
         {
             float reste = currentXP - maxXP;
             playerLevel += 1;
-            playerLevelTxt.text = playerLevel;
+            //playerLevelTxt.text = playerLevel;
             currentXP = 0 + reste;
             maxXP = maxXP * rateXP;
         } 
